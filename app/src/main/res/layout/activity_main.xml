@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startService"
+        android:text="startService"
+        app:layout_constraintBottom_toTopOf="@+id/stopService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/stopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="stopService"
+        app:layout_constraintBottom_toTopOf="@+id/bindService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startService"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/bindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="bindService"
+        android:text="bindService"
+        app:layout_constraintBottom_toTopOf="@+id/unbindService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopService"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/unbindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="unbindService"
+        android:text="unbindService"
+        app:layout_constraintBottom_toTopOf="@+id/getRandomNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bindService"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/getRandomNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getRandomNumber"
+        android:text="getRandomNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unbindService"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/getRandomNumber"
+        app:layout_constraintTop_toBottomOf="@+id/unbindService" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
